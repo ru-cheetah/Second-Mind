@@ -2,9 +2,59 @@
 
 A minimalist web application designed to help chronic overthinkers capture, process, and structure their chaotic thoughts using local, privacy-first AI processing with Google's Gemma model.
 
+---
+
+## The "Why": Solving the Overthinker's Dilemma
+
+Overthinking isn't just "thinking too much"—it is a state of cognitive overload where thoughts move too fast to be processed, categorized, or understood. When an overthinker experiences stress, their brain dumps ideas, anxieties, and branch-offs all at once, leading to a paralyzing feedback loop. Traditional journaling often fails because translating a chaotic web of thoughts into a linear text format requires the very mental structure the user is currently lacking.
+
+**Second Mind** acts as an external cognitive sandbox. It provides an immediate, frictionless "brain dump" mechanism that accepts the mess exactly as it is—whether it’s a spoken audio rant, a chaotic stream of consciousness text, or visual context. By taking the burden of organization off the user, it intercepts the spiral and restores mental clarity.
+
+## Why Google Gemma is the Perfect Fit
+
+Building a "Second Mind" requires an AI model that balances high-quality semantic understanding with extreme resource efficiency and absolute privacy. Google’s Gemma is uniquely suited for this for three critical reasons:
+
+1. **Absolute, Uncompromised Privacy:** A user’s most raw, vulnerable, and chaotic thoughts should never live on a cloud server or be used for corporate model training. Because Gemma is highly optimized for local execution via Ollama, *Second Mind* runs entirely on-premise. Your raw thoughts never leave your local machine.
+2. **Exceptional Reasoning in a Compact Footprint:** Built on the same research and technology as Google's Gemini models, Gemma possesses advanced linguistic and structural reasoning capabilities. It doesn't just summarize text; it effectively identifies underlying themes, separates objective facts from anxiety-induced assumptions, and structures chaotic dialogue into logical nodes.
+3. **Sub-Second Local Latency:** When a user is spinning out, waiting for a clogged cloud API to respond introduces friction that worsens anxiety. Gemma's lightweight architecture allows it to generate rapid "Headspace Summaries" locally, providing instant grounding and feedback right when the user needs it most.
+
+---
+
 ## Overview
 
 **Second Mind** seamlessly captures multi-modal inputs (voice, photos, text) and processes them locally using an on-device AI model to structure chaotic thoughts into clear, actionable, or comforting formats.
+
+### Core Features (Phase 1 - Capture UI)
+
+- **Voice Recording**: Record long-form voice rants with real-time waveform visualization
+- **Visual Input**: Upload photos or images for context
+- **Text Rant**: Write unfiltered thoughts in a distraction-free interface
+- **Calming UI**: Dark-mode, minimalist design with soft colors (blues, greens, pastels)
+- **Privacy-First**: All data processing happens locally on your device using Ollama + Gemma
+
+## Tech Stack
+
+- **Frontend**: React 18 + Next.js 14 + TypeScript
+- **Styling**: Tailwind CSS with custom calm color palette
+- **AI Backend**: Ollama (local LLM runtime) + Google Gemma model
+- **State Management**: Zustand (prepared for future use)
+- **Development**: ESLint, Prettier
+
+## Prerequisites
+
+### System Requirements
+
+- Node.js 18+ and npm/yarn
+- Ollama installed locally ([Download Ollama](https://ollama.ai))
+- Google Gemma model pulled in Ollama
+
+### Setup Ollama
+
+1. **Install Ollama** from [ollama.ai](https://ollama.ai)
+
+2. **Pull the Gemma model**:
+```bash
+   ollama pull gemma
 
 ### Core Features (Phase 1 - Capture UI)
 
